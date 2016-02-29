@@ -1,6 +1,6 @@
-<h3>Log In</h3>
 <div class="row">
   <div class="small-7 columns">
+    <h1>Log In</h1>
     <%= form_tag sessions_path do %>
       <div class="control-group">
         <%= label_tag :email %>
@@ -16,7 +16,7 @@
         </div>
       </div>
       
-      <div class="actions"><%= submit_tag "Log In" %></div>
+      <div class="actions"><%= submit_tag "Log In", :class => 'button radius' %></div>
     <% end %>
   </div>
 </div>
