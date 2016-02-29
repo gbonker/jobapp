@@ -3,6 +3,9 @@
 <div class="row">
     <div class="col-sm-12">
         <h1>Available Jobs</h1>
+        <% if logged_in? %>
+          <%= link_to "Post a New Job", new_post_path, :class => 'button radius' %>
+        <% end %>
     </div>
 </div>
 

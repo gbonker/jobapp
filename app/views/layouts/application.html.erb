@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Jobapp</title>
+	<title>JobApp</title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
@@ -14,16 +14,10 @@
 				<%= link_to "JobApp", posts_path %>
 			</li>
 
-			<% if logged_in? %>
-			<li class="right">
-				<%= link_to "Add a New Post", new_post_path %>
-			</li>
-			<% end %>
-
 			<!-- content once logged in goes here -->
 			<% if logged_in? %>
 			<li class="right">
-				<%#= link_to user.name, user_path %>
+				<%#= link_to session.current_user.name, user_path %>
 				<%= link_to 'Logout', logout_path %>
 			</li>
 			<% else %>

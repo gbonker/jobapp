@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
 	belongs_to :user
 
 	#Validations
-	validates_presence_of :title, :description, :user_id
+	validates_presence_of :title, :description
 
 	#Scopes
 	scope :chronological, -> { order(created_at: :desc) }
