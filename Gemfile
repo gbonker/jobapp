@@ -23,6 +23,18 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Use a gem for handling date validation
+gem 'validates_timeliness'
+
+# Use simple_form to clean up form views
+gem 'simple_form'
+
+# Use foundation for base CSS
+gem 'foundation-rails'
+
+# used for authorization
+gem 'cancancan'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
