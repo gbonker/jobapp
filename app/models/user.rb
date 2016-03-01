@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   #Validations
   validates_presence_of :name, :email
-  validates_format_of :email, with: /\A[\w]([^@\s,;]+)@(([\w-]+\.)+(com|edu|org|net|gov|mil|biz|info))\z/i, message: "is not a valid format"
+  validates_format_of :email, with: /\A[\w]([^@\s,;]+)@(([\w-]+\.)+[a-z]{2,})\z/i, message: "is not a valid format"
   validates_presence_of :password, on: :create 
   validates_presence_of :password_confirmation, on: :create 
   validates_confirmation_of :password, message: "does not match"

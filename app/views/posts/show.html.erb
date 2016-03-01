@@ -2,8 +2,8 @@
   <div class="small-7 columns">
 	<p id="notice"><%= notice %></p>
 	<p>
-	  <strong>User:</strong>
-	  <%= @post.user_id %>
+	  <strong>Posted by:</strong>
+	  <%= @post.user.name %>
 	</p>
 
 	<p>
@@ -16,9 +16,9 @@
 
 <br></br>
 <%#= render :partial => "post" %>
-
+<% if logged_in? %>
 	<%= link_to 'Edit', edit_post_path(@post), :class => 'button radius' %>
 	<%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button alert radius' %>
-
+<% end %>
   </div>
 </div>
