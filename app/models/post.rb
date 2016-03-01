@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
 	validates_presence_of :title, :description
 
 	#Scopes
-	scope :chronological, -> { order(created_at: :desc) }
-	scope :reverse_chronological, -> { order(created_at: :asc) }
+	scope :chronological, -> { order(created_at: :asc) }
+	scope :reverse_chronological, -> { order(created_at: :desc) }
 
 end

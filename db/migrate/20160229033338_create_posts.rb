@@ -5,8 +5,8 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.datetime :created_at
-
-      t.timestamps null: false
+ 
+      # t.timestamps null: false
     end
   end
 end

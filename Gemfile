@@ -44,7 +44,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
+group :development do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -53,6 +53,11 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # additional dev gems
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'quiet_assets'
 end
 
 # Gems used only in testing
@@ -62,12 +67,13 @@ group :test do
   gem 'factory_girl_rails'
   gem 'mocha', require: false
   gem 'simplecov'
-  gem 'turn'
   gem 'single_test'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'launchy'
   gem 'capybara'
   gem 'minitest'
+  gem 'minitest-rails'
+  gem 'minitest-reporters'
 end
 
