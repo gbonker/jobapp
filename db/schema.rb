@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20160229043650) do
     t.string   "title"
     t.text     "description"
     t.datetime "created_at"
+    t.integer  "click_count", default: 0
   end
 
   create_table "users", force: :cascade do |t|

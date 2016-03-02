@@ -31,6 +31,10 @@ namespace :db do
         post.description = Faker::Lorem.paragraph
         post.created_at = (2.years.ago.to_date..2.days.ago.to_date).to_a.sample
         post.user_id = user.id
+        chance_of_clicks = rand(4)
+        unless chance_of_clicks.zero?
+          post.click_count = rand(5) + 1
+        end
         post.save!
       end
 

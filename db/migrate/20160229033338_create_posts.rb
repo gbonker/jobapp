@@ -5,6 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.datetime :created_at
+      t.integer :click_count, default: 0
  
       # t.timestamps null: false
     end

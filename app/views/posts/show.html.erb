@@ -11,6 +11,8 @@
 	  <%= @post.description %>
 	</p>
 
+	<p><%= @post.click_count %></p>
+
 <br></br>
 
 <% if logged_in? && current_user.id == @post.user_id %>
