@@ -76,11 +76,36 @@ div {
   background-color: #070772;
 }
 
+.top-bar ul {
+  background-color: #070772;
+}
+
+.top-bar-left {
+  background-color: #070772;
+}
+
+.top-bar-right {
+  background-color: #070772;
+}
+
 li {
   list-style-type: none;
 }
 
-#nav-link a:link { color: #fefefe; }
-#nav-link a:visited { color: #fefefe; }
-#nav-link a:hover { color: #ffffff; }
-#nav-link a:active { color: #fefefe; }
+.menu-text {
+  background-color: #070772;
+}
+
+.menu {
+  background-color: #070772;
+}
+
+#nav-link a:link { color: #fefefe; background-color: #070772;}
+#nav-link a:visited { color: #fefefe; background-color: #070772;}
+#nav-link a:hover { color: #2199e8; background-color: #070772;}
+#nav-link a:active { color: #fefefe; background-color: #070772;}
+
+#app_title {
+  font-style: bold;
+  font-size: 1.25rem;
+}

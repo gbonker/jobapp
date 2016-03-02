@@ -8,26 +8,7 @@
 </head>
 <body>
 
-	<div class="contain-to-grid">
-		<nav class="top-bar" data-topbar>
-			<li class="title" id="nav-link">
-				<%= link_to "JobApp", posts_path %>
-			</li>
-
-			<!-- content once logged in goes here -->
-			<% if logged_in? %>
-			<li class="right" id="nav-link">
-				<%#= link_to session.current_user.name, user_path %>
-				<%= link_to 'Logout', logout_path %>
-			</li>
-			<% else %>
-			<li class="right" id="nav-link">
-				<%= link_to 'Login', login_path %> |
-				<%= link_to 'Sign Up', signup_path %>
-			</li>
-			<% end %>
-		</nav>
-	</div>
+<%= render :partial => "layouts/nav" %>
 
 <%= yield %>
 

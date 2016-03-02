@@ -1,5 +1,7 @@
+<div class="large-11 column">
 <p id="notice"><%= notice %></p>
 
+<h1>Your Account</h1>
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
@@ -10,10 +12,7 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
+<%= link_to 'Edit Your Account', edit_user_path(@user), :class => 'button radius' %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+</div>
+

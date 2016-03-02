@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-sm-12">
+    <div class="large-10 column">
         <p id="notice"><%= notice %></p>
         <h1>Available Jobs</h1>
         <% if logged_in? %>
@@ -7,14 +7,13 @@
         <% else %>
           <p>Please <%= link_to "log in", login_path %> to post new jobs on this board.</p>
         <% end %>
+        <% @posts.each do |post| %>
+          <%= render post %>
+        <% end %>
     </div>
 </div>
 
 <br></br>
-
-<% @posts.each do |post| %>
-  <%= render post %>
-<% end %>
 
 <br>
 
