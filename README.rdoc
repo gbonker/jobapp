@@ -11,4 +11,8 @@ I created my own sample data for this app in the populate.rake file. This can be
 
 I also wrote some basic unit tests, which all pass. These tests can be ran using rake test:units.
 
+The number of times each post has been clicked is kept track of with an attribute in the post model called click_count.
+
+This application is also responsive to mobile.
+
 
