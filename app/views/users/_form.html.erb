@@ -29,8 +29,13 @@
         <%= f.input :password_confirmation %>
 
         <div class="form-actions">
-          <%= f.submit 'Submit', :class => 'button radius' %>
+        <% if controller.action_name == "new" %>
+          <%= f.submit 'Sign Up', :class => 'button radius' %>
+          <%= link_to 'Cancel', posts_path, :class => 'button alert radius' %>
+        <% else %>
+          <%= f.submit 'Update Account', :class => 'button radius' %>
           <%= link_to 'Cancel', user_path(current_user.id), :class => 'button alert radius' %>
+        <% end %>
         </div>
       </fieldset>   
 <% end %>

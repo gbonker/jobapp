@@ -1,39 +1,46 @@
-<div class="row">
+<div class="small-12 column">
 
-	<p id="notice"><%= notice %></p>
+	<div class="row">
+		<p id="notice"><%= notice %></p>
+	</div>
+
+	<div class="row">
+		<br></br>
+		<h5><%= link_to '< Back to Job Board', posts_path %></h5>
+	</div>
+
+	<div class="row">
+		<p>
+			<h2><%= @post.title %></h2>
+		</p>
+	</div>
+
+	<div class="row">
+		<p>
+			<h6>Posted on <%= @post.created_at.strftime("%A, %B %-d, %Y") %> by <%= @post.user.name %></h6>
+		</p>
+	</div>
+
+	<div class="row">
+		<p>
+			<%= @post.description %>
+		</p>
+	</div>
+
+	<div class="row">
+		<% if @post.click_count == 1 %>
+		<p>This post has been clicked on 1 time.</p> 
+		<% else %> 
+		<p>This post has been clicked on <strong><%= @post.click_count %></strong> times.</p>
+		<% end %>
+	</div>
+
 	<br></br>
-	<h5><%= link_to '< Back to Job Board', posts_path %></h5>
-</div>
-<div class="row">
-	<p>
-	  <h2><%= @post.title %></h2>
-	</p>
-</div>
-<div class="row">
-	<p>
-	  <h6>Posted on <%= @post.created_at.strftime("%A, %B %-d, %Y") %> by <%= @post.user.name %></h6>
-	</p>
-</div>
-<div class="row">
-	<p>
-	  <%= @post.description %>
-	</p>
-</div>
-<div class="row">
-	<% if @post.click_count == 1 %>
-		<p>You are the first person to explore this job. Be the first to reach out to the employer!</p> 
-	<% else %> 
-		<p><%= @post.click_count %> people have explored this job.</p>
-	<% end %>
-</div>
-<div class="row">
-<br></br>
-
-<% if logged_in? && current_user.id == @post.user_id %>
-	<%= link_to 'Edit', edit_post_path(@post), :class => 'button radius' %>
-	<%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button alert radius' %>
-<% end %>
+	<div class="row">
+		<% if logged_in? && current_user.id == @post.user_id %>
+		<%= link_to 'Edit', edit_post_path(@post), :class => 'button radius' %>
+		<%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button alert radius' %>
+		<% end %>
+	</div>
 
 </div>
-
-

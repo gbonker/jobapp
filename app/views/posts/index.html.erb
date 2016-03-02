@@ -5,8 +5,9 @@
         <% if logged_in? %>
           <%= link_to "Post a New Job", new_post_path, :class => 'button radius' %>
         <% else %>
-          <p>Please <%= link_to "log in", login_path %> to post new jobs on this board.</p>
+          <p>Please <%= link_to "log in", login_path %> or <%= link_to "sign up", signup_path %> to post new jobs on this board.</p>
         <% end %>
+        <br></br>
         <% @posts.each do |post| %>
           <%= render post %>
         <% end %>
